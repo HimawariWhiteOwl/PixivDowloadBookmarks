@@ -27,7 +27,7 @@ aapi = AppPixivAPI()
 aapi.auth(refresh_token=refreshToken)
 #https://www.pixiv.net/en/users/{PixivUserId}/bookmarks/artworks
 json_result = aapi.user_bookmarks_illust("PixivUserId")  ##### Remove String use int PixivUserId Number
-lastBookmarkId = illust = json_result.illusts[0].id
+lastBookmarkId = json_result.illusts[0].id
 
 if os.path.exists(jsonfile):
     d = open(jsonfile, "r")
